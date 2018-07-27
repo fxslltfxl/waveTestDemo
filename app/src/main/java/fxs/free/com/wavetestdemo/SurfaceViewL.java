@@ -14,7 +14,6 @@ import android.graphics.Xfermode;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import java.util.Random;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
@@ -163,7 +162,7 @@ public class SurfaceViewL extends SurfaceView implements SurfaceHolder.Callback 
         bottomPath.lineTo(mWidth, centerHeight);
         centerPath.lineTo(mWidth, centerHeight);
         // 保存图层
-      int saveCount = mCanvas.saveLayer(0, 0, mWidth, mHeight, null, Canvas.ALL_SAVE_FLAG);
+        int saveCount = mCanvas.saveLayer(0, 0, mWidth, mHeight, null, Canvas.ALL_SAVE_FLAG);
         //填充上下两条
         mPaint.setColor(Color.WHITE);
         mPaint.setStrokeWidth(3);
